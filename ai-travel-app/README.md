@@ -5,6 +5,9 @@
 - Run app: npm run dev
 - Open: [http://localhost:3000](http://localhost:3000)
 
+2. Install ia packages: npm i ai @ai-sdk/openai
+
+
 First, run the development server:
 
 ```bash
