@@ -6,6 +6,12 @@
 - Open: [http://localhost:3000](http://localhost:3000)
 
 2. Install ia packages: npm i ai @ai-sdk/openai
+3. Create API keys: https://platform.openai.com/
+4. Add .env.local file into src folder and add OPENAI_API_KEY={{apy_key}}
+5. Create src/app/api/completion/route.js file
+6. Add useCompletion hook and form component to page.js file
+7. 
+
 
 
 First, run the development server:
