@@ -11,4 +11,6 @@
 5. Create src/app/api/completion/route.js file
 6. Add useCompletion hook and form component to page.js file
 7. Add useChat hook and rename api/completion to api/chat
+8. Add useState and Button
+9. Add actions.js file with generateText async function
 
