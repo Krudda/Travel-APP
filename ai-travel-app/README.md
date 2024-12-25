@@ -13,4 +13,5 @@
 7. Add useChat hook and rename api/completion to api/chat
 8. Add useState and Button
 9. Add actions.js file with generateText async function
+10. Replace generateText function in actions with generate function, contains createStreamableValue call
 

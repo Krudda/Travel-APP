@@ -1,8 +1,9 @@
 'use client';
 
-import { getAnswer } from './actions';
-
 import { useState } from 'react';
+import { readStreamableValue } from 'ai/rsc'
+import { generate } from './actions';
+
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
@@ -13,10 +14,13 @@ export default function Home() {
     <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
       <button
         onClick={async () => {
-          const { text } = await getAnswer(
+          const { output } = await generate(
             'Question'
           );
-          setGeneration(text);
+
+          for await (const delta of readStreamableValue(output)) {
+            setGeneration((currentGeneration) => `${currentGeneration}${delta}`);
+          }
         }}
       >
         Ask!
